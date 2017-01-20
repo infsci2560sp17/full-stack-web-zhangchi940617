@@ -9,7 +9,7 @@ TODO : Modify to match your project specific Travis Build
 
 ## Web Site
 
-TODO : Please provide a link to your web site ![](https://secret-woodland-48637.herokuapp.com/)
+TODO : https://secret-woodland-48637.herokuapp.com/
 
 ## Key Features
 
