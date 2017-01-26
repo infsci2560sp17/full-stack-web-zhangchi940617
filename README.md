@@ -1,15 +1,29 @@
-﻿# TODO : Your Project Name
+# BOOK2HAND
 
-TODO : Please provide a detailed project description.
+1. What is the proposed name for your Web application?
+    - BOOK2HAND
+2. Who is the target audience for your Web application?
+    - Students who have some used books and no need to use them anymore. And Students who want to buy used books rather than brand new books.
+3. What problem is it intended to solve for the target audience?
+    - Because of the high prices, many students like to buy used books rather than brand new books. And some others have books they do not want to read anymore, so they can sell books to people who need them. Exchanging books on my website means both of them can reach their goals quickly. Sellers put their books on the website and provide names, prices, images etc. Buyers can find the books they want on the website.
+4. How will it meet the minimum project requirements?
+    - My site will use the totally free model. Users can view the content and search books without a login. But if users want to buy or sell books, they must sign up and log in, and their information will be stored in my database. Also books' information will be recorded in the database as long as the sellers provide it. I'll use PayPal for payments. Sellers must provide their PayPal account information and some other necessary information to obtain proceeds, and buyers can only use PayPal to pay. All public data will be accessible through RESTful services. All RESTful services will data in both JSON and XML formats. 
+5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+     - My site will recommand different books to different kinds of users according to their basic information, searching keywords, content viewed and accomplished deals. I'll recommand a housewife some books about cooking and recommand a businessman some books about economics.
 
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-zhangchi940617)
 
+
+## Changelog
+
+[Changelog](CHANGELOG.md)
+
 ## Web Site
 
-TODO : https://secret-woodland-48637.herokuapp.com/
+[BOOK2HAND](https://secret-woodland-48637.herokuapp.com/)
 
 ## Key Features
 
