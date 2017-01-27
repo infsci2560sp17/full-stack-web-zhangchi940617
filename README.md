@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 7d4cf8ff2f207902efbbb80265809e717a838eec
-# BOOK2HAND
+﻿# BOOK2HAND
 
 1. What is the proposed name for your Web application?
     - BOOK2HAND
@@ -20,10 +16,6 @@
 TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-zhangchi940617)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d4cf8ff2f207902efbbb80265809e717a838eec
 ## Changelog
 
 [Changelog](CHANGELOG.md)
