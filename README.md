@@ -14,7 +14,7 @@
 
 Assignment 1.3
 	
-	cloned the teacher's code, changed some html contents and java functions
+- cloned the teacher's code, changed some html contents and java functions
 
 ## Build status
 
