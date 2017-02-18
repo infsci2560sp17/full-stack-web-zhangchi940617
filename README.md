@@ -11,6 +11,11 @@
 5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
      - My site will recommand different books to different kinds of users according to their basic information, searching keywords, content viewed and accomplished deals. I'll recommand a housewife some books about cooking and recommand a businessman some books about economics.
 
+
+Assignment 1.3
+	
+	cloned the teacher's code, changed some html contents and java functions
+
 ## Build status
 
 TODO : Modify to match your project specific Travis Build

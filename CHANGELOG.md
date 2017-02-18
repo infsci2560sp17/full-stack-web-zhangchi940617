@@ -5,7 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [Unreleased]
 ### Added
-- TBD.
+- cloned the teacher's code.
+- changed html content
+- changed the function add book in java documents
 
 ## [v1.2] - 2017-01-28
 ### Added
