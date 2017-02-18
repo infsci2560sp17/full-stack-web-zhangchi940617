@@ -1,7 +1,7 @@
 package edu.infsci2560;
 
 import edu.infsci2560.models.Dvd;
-import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.models.Dvd.BookType;
 import edu.infsci2560.repositories.DvdRepository;
 
 import org.slf4j.Logger;
@@ -20,9 +20,9 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         DvdRepository repository = ctx.getBean(DvdRepository.class);
-        repository.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
-        repository.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
-        repository.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
+        repository.save(new Dvd(1L, "Project Management", BookType.Management));
+        repository.save(new Dvd(2L, "Art History", BookType.Art));
+        repository.save(new Dvd(3L, "The Little Prince", BookType.Novel));
     }
 
 

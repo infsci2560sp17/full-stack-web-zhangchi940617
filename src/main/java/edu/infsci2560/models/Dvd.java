@@ -21,34 +21,34 @@ public class Dvd {
 
     private static final long serialVersionUID = 1L;
 
-    public enum WorkoutType {
+    public enum BookType {
         Unknown,
-        Strength,
-        Cardio,
-        CrossTrain
+        Management,
+        Novel,
+        Art
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected WorkoutType workoutType;
+    protected BookType bookType;
 
     public Dvd() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.workoutType = WorkoutType.Unknown;
+        this.bookType = BookType.Unknown;
     }
 
-    public Dvd(Long id, String name, WorkoutType workoutType) {
+    public Dvd(Long id, String name, BookType bookType) {
         this.id = id;
         this.title = name;
-        this.workoutType = workoutType;
+        this.bookType = bookType;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", bookType=" + this.bookType + " ]";
     }
 
     @Override
@@ -78,15 +78,15 @@ public class Dvd {
     /**
      * @return the workoutType
      */
-    public WorkoutType getWorkoutType() {
-        return workoutType;
+    public BookType getBookType() {
+        return bookType;
     }
 
     /**
      * @param workoutType the workoutType to set
      */
-    public void setWorkoutType(WorkoutType workoutType) {
-        this.workoutType = workoutType;
+    public void setBookType(BookType bookType) {
+        this.bookType = bookType;
     }
 
     /**

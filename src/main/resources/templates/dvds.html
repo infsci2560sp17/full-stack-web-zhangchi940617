@@ -4,33 +4,33 @@
         <title>User Home</title>
     </head>
     <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s DVD's!</h1>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s BOOK's!</h1>
 
         <div>
             <table style="border: 1px solid black">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Workout Type</th>
+                    <th>Book Type</th>
                 </tr>                
                 <tr data-th-each="dvd : ${dvds}">
                     <td data-th-text="${dvd.id}"></td>
                     <td data-th-text="${dvd.title}"></td>
-                    <td data-th-text="${dvd.workoutType}"></td>
+                    <td data-th-text="${dvd.bookType}"></td>
                 </tr>
             </table>
         </div>
         
         <hr />
-        Add DVD<br />
+        Add BOOK<br />
         <form data-th-action="@{/dvds/add}" name="addDvdForm" method="post">
             Title: <input type="text" name="title" /><br />
-            Workout Type:<br />
-            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="workoutType" value="Strength" /> Strength<br />
-            <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
-            <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
-            <input type="submit" value="Add Workout"/>
+            Book Type:<br />
+            <input type="radio" name="bookType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="bookType" value="Management" /> Management<br />
+            <input type="radio" name="bookType" value="Novel" /> Novel<br />
+            <input type="radio" name="bookType" value="Art" /> Art<br />
+            <input type="submit" value="Add Book"/>
         </form>
         
         <hr />       

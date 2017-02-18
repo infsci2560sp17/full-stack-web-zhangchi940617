@@ -6,7 +6,7 @@
 package edu.infsci2560.services;
 
 import edu.infsci2560.models.Dvd;
-import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.models.Dvd.BookType;
 import edu.infsci2560.repositories.DvdRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
