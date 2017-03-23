@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author kolobj
  */
 @Entity
-public class Dvd {
+public class Book {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,13 +34,13 @@ public class Dvd {
     protected String title;
     protected BookType bookType;
 
-    public Dvd() {
+    public Book() {
         this.id = Long.MAX_VALUE;
         this.title = null;
         this.bookType = BookType.Unknown;
     }
 
-    public Dvd(Long id, String name, BookType bookType) {
+    public Book(Long id, String name, BookType bookType) {
         this.id = id;
         this.title = name;
         this.bookType = bookType;

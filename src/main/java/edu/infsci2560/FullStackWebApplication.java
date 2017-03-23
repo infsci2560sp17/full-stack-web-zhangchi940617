@@ -1,8 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Dvd;
-import edu.infsci2560.models.Dvd.BookType;
-import edu.infsci2560.repositories.DvdRepository;
+import edu.infsci2560.models.Book;
+import edu.infsci2560.models.Book.BookType;
+import edu.infsci2560.repositories.BookRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +19,10 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        DvdRepository repository = ctx.getBean(DvdRepository.class);
-        repository.save(new Dvd(1L, "Project Management", BookType.Management));
-        repository.save(new Dvd(2L, "Art History", BookType.Art));
-        repository.save(new Dvd(3L, "The Little Prince", BookType.Novel));
+        BookRepository repository = ctx.getBean(BookRepository.class);
+        repository.save(new Book(1L, "Project Management", BookType.Management));
+        repository.save(new Book(2L, "Art History", BookType.Art));
+        repository.save(new Book(3L, "The Little Prince", BookType.Novel));
     }
 
 
