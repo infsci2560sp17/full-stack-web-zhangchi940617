@@ -2,9 +2,57 @@
 <html>
     <head>
         <title>User Home</title>
+        <script type="text/javascript" src="http://www.javascript-validation.com/view/js/jvalidation.2.0.0.min.js"></script>
+        
+        
+        <style type="text/css">
+            body {
+                background-image:url(image/book.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+                margin:0 auto;
+                /*text-align: center;*/
+            }
+            ul{
+                
+                float:left;
+                width:100%;
+                padding:0;
+                margin:0;
+                list-style-type:none;
+            }
+            a{
+                float:left;
+                width:7em;
+                text-decoration:none;
+                color:white;
+                background-color:purple;
+                padding:0.2em 0.6em;
+                border-right:1px solid white;
+            }
+            a:hover {background-color:#ff3300}
+            li {display:inline}
+
+        </style>
+
+
     </head>
-    <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s BOOK's!</h1>
+    
+    <body >
+        <h1   data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s BOOK's!</h1>
+        
+        
+        <ul>
+            <li><a data-th-href="@{/files}">Upload a File</a></li>
+            <li><a data-th-href="@{/personalinformation}">Personal Information</a></li>
+            <li><a data-th-href="@{/magazines}">Magazine</a></li>
+            <li><a data-th-href="@{/bookswebsite}">BookWebsite</a></li>
+        </ul>
+        
+        
+
 
         <div>
             <table style="border: 1px solid black">
@@ -23,19 +71,36 @@
         
         <hr />
         Add BOOK<br />
-        <form data-th-action="@{/books/add}" name="addBookForm" method="post">
+        <form  data-th-action="@{/books/add}" name="addBookForm" method="post">
             Title: <input type="text" name="title" /><br />
             Book Type:<br />
             <input type="radio" name="bookType" value="Unknown" checked="checked" /> Unknown<br />
             <input type="radio" name="bookType" value="Management" /> Management<br />
             <input type="radio" name="bookType" value="Novel" /> Novel<br />
             <input type="radio" name="bookType" value="Art" /> Art<br />
-            <input type="submit" value="Add Book"/>
+            <input type="submit" value="Add Book" onClick="Validator();"/>
         </form>
-        
-        <hr />       
+        <hr />
+             
+        <form  data-th-action="@{/books/delete}" name="deleteBookForm" method="delete">
+            Delete ID: <input type="text" name="id" /><br />
+            
+            
+            <input type="submit" value="Delete Book"/>
+        </form>
+        <hr />
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
+
+        <script type="text/javascript">
+        function Validator() {                     //javascript validation
+
+        requiredfield("title", 1, "Enter a correct book title.");   // title cannot be empty
+        
+        submitform("addBookForm");
+    }
+</script>
     </body>
+    
 </html>

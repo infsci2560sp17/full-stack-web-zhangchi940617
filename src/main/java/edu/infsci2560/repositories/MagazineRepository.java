@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.repositories;
 
-import edu.infsci2560.models.Book;
+import edu.infsci2560.models.Magazine;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 
-public interface BookRepository extends PagingAndSortingRepository<Book, Long> {}
+public interface MagazineRepository extends PagingAndSortingRepository<Magazine, Long> {}

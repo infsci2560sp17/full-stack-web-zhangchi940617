@@ -5,9 +5,9 @@
  */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.Book;
-import edu.infsci2560.models.Book.BookType;
-import edu.infsci2560.repositories.BookRepository;
+import edu.infsci2560.models.Personalinformation;
+// import edu.infsci2560.models.Personalinformation.BookType;
+import edu.infsci2560.repositories.PersonalinformationRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,27 +25,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RestController
-@RequestMapping("/public/api/books")
-public class BooksService {
+@RequestMapping("/public/api/Personalinformation")
+public class PersonalinformationService {
 
     @Autowired
-    private BookRepository repository;
+    private PersonalinformationRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<Book>> list() {
+    public ResponseEntity<Iterable<Personalinformation>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Book> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Personalinformation> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Book> create(@RequestBody Book book) {
+    public ResponseEntity<Personalinformation> create(@RequestBody Personalinformation personalinformation) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(book), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(personalinformation), headers, HttpStatus.OK);
     }
 }

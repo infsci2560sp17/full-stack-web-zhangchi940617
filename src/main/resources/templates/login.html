@@ -2,17 +2,29 @@
 <html>
     <head>
         <title>Spring Security Example </title>
+        <style type="text/css">
+        input {
+  display: block;
+  font-size: 14px;
+  width:240px;
+  margin: 10px auto;
+  padding: 10px 8px 10px 8px;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+  border: 1px solid #666;
+}
+        </style>
     </head>
     <body>        
-        <div data-th-if="${param.error}">
+        <div   data-th-if="${param.error}">
             Invalid username and password.
         </div>
-        <div data-th-if="${param.logout}">
+        <div   data-th-if="${param.logout}">
             You have been logged out.
         </div>
-        <form data-th-action="@{/login}" method="post">
-            <div><label> User Name: <input type="text" name="username"/> </label></div>
-            <div><label> Password: <input type="password" name="password"/> </label></div>
+        <form  data-th-action="@{/login}" method="post">
+            <div><label > <input type="text" name="username" placeholder="Username" /> </label></div>
+            <div><label > <input type="password" name="password" placeholder="password" /> </label></div>
             <div><input type="submit" value="Sign In"/></div>
         </form>
     </body>

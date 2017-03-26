@@ -5,8 +5,11 @@
  */
 package edu.infsci2560.repositories;
 
-import edu.infsci2560.models.Book;
+import edu.infsci2560.models.Personalinformation;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-
-public interface BookRepository extends PagingAndSortingRepository<Book, Long> {}
+/**
+ *
+ * @author kolobj
+ */
+public interface PersonalinformationRepository extends PagingAndSortingRepository<Personalinformation, Long> {}

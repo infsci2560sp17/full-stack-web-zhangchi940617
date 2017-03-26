@@ -19,11 +19,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-/**
- *
- * @author kolobj
- */
 @Controller
 public class BooksController {
     @Autowired
@@ -38,6 +38,20 @@ public class BooksController {
     public ModelAndView create(@ModelAttribute @Valid Book book, BindingResult result) {
         repository.save(book);
         return new ModelAndView("books", "books", repository.findAll());
+    }
+
+    //@RequestMapping(value = "books", method = RequestMethod.DELETE)
+    @RequestMapping(value = "books/delete", method = RequestMethod.GET)
+    public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
+        // log.info("*** delete id = " + id);
+        Book book = repository.findOne(id);
+        
+        if ( book != null ) {
+           // log.info("*** recipe is not null");
+            repository.delete(book);
+        }
+
+        return new ModelAndView("books", "books", repository.findOne(id));
     }
     
 }

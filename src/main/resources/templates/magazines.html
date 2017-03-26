@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            select,
+            input[type=text] {
+                border-radius: 5px;
+                padding: 6px 10px;
+                border: 2px solid #9fc7c0;
+                font-color: #666;
+                font-size: 15px;
+            }
+            
+        </style>
+    </head>
+    <center>
+    <body>
+        
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>MagazineType</th>
+                    <th>Year</th>
+                    <th>Month</th>
+                </tr>                
+                <tr data-th-each="magazine : ${magazines}">
+                    <td data-th-text="${magazine.id}"></td>
+                    <td data-th-text="${magazine.title}"></td>
+                    <td data-th-text="${magazine.magazineType}"></td>
+                    <td data-th-text="${magazine.year}"></td>
+                    <td data-th-text="${magazine.month}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Edit Personalinformation<br />
+        <form data-th-action="@{/magazines/add}" name="addMagazineForm" method="post">
+            Title: <input type="text" name="title" /><br />
+            Magazine Type:<br />
+            <input type="radio" name="magazineType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="magazineType" value="Entertainment" /> Entertainment<br />
+            <input type="radio" name="magazineType" value="Tourist" /> Tourist<br />
+            <input type="radio" name="magazineType" value="Health" /> Health<br />
+            <input type="radio" name="magazineType" value="Auto" /> Auto<br />
+
+            <select  name="year">
+                <option value ="2000">2000</option>
+                <option value ="2001">2001</option>
+                <option value ="2002">2002</option>
+                <option value ="2003">2003</option>
+                <option value ="2004">2004</option>
+                <option value ="2005">2005</option>
+                <option value ="2006">2006</option>
+                <option value ="2007">2007</option>
+                <option value ="2008">2008</option>
+                <option value ="2009">2009</option>
+                <option value ="2010">2010</option>
+                <option value ="2011">2011</option>
+                <option value ="2012">2012</option>
+                <option value ="2013">2013</option>
+                <option value ="2014">2014</option>
+                <option value ="2015">2015</option>
+                <option value ="2016">2016</option>
+                <option value ="2017">2017</option>
+            </select>  <br />
+
+            <select  name="month">
+                <option value ="01">01</option>
+                <option value ="02">02</option>
+                <option value ="03">03</option>
+                <option value ="04">04</option>
+                <option value ="05">05</option>
+                <option value ="06">06</option>
+                <option value ="07">07</option>
+                <option value ="08">08</option>
+                <option value ="09">09</option>
+                <option value ="10">10</option>
+                <option value ="11">11</option>
+                <option value ="12">12</option>
+            </select>  <br />
+
+            <input type="submit" value="Add personalinformation"/>
+        </form>
+        <hr />
+        <a href="/books.html">back</a>
+            
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+    </center>>
+</html>

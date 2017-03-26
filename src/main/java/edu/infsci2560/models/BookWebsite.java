@@ -13,38 +13,33 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 @Entity
-public class Book {
+public class BookWebsite {
 
     private static final long serialVersionUID = 1L;
 
-    public enum BookType {
-        Unknown,
-        Management,
-        Novel,
-        Art
-    }
+    
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String title;
-    protected BookType bookType;
+    protected String website;
+    protected String link;
 
-    public Book() {
+    public BookWebsite() {
         this.id = Long.MAX_VALUE;
-        this.title = null;
-        this.bookType = BookType.Unknown;
+        this.website = null;
+        this.link = null;
     }
 
-    public Book(Long id, String name, BookType bookType) {
+    public BookWebsite(Long id, String website, String link) {
         this.id = id;
-        this.title = name;
-        this.bookType = bookType;
+        this.website = website;
+        this.link = link;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", bookType=" + this.bookType + " ]";
+        return "[ id=" + this.id + ", website=" + this.website + ", link=" + this.link + " ]";
     }
 
     @Override
@@ -58,23 +53,23 @@ public class Book {
     }
 
     
-    public String getTitle() {
-        return title;
+    public String getWebsite() {
+        return website;
     }
 
     
-    public void setTitle(String title) {
-        this.title = title;
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
     
-    public BookType getBookType() {
-        return bookType;
+    public String getLink() {
+        return link;
     }
 
 
-    public void setBookType(BookType bookType) {
-        this.bookType = bookType;
+    public void setLink(String link) {
+        this.link = link;
     }
 
     

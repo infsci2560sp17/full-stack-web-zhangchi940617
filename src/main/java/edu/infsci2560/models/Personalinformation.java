@@ -12,39 +12,38 @@ import javax.persistence.Id;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+
 @Entity
-public class Book {
+public class Personalinformation {
 
     private static final long serialVersionUID = 1L;
 
-    public enum BookType {
-        Unknown,
-        Management,
-        Novel,
-        Art
-    }
+   
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String title;
-    protected BookType bookType;
+    protected String name;
+    protected int age;
+    protected String phone;
 
-    public Book() {
+    public Personalinformation() {
         this.id = Long.MAX_VALUE;
-        this.title = null;
-        this.bookType = BookType.Unknown;
+        this.name = null;
+        this.age=0;
+        this.phone=null;
     }
 
-    public Book(Long id, String name, BookType bookType) {
+    public Personalinformation(Long id, String name, int age, String phone) {
         this.id = id;
-        this.title = name;
-        this.bookType = bookType;
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", bookType=" + this.bookType + " ]";
+        return "[ id=" + this.id + ", name=" + this.name + ", age=" + this.age + ", phone=" + this.phone + " ]";
     }
 
     @Override
@@ -57,32 +56,38 @@ public class Book {
         return HashCodeBuilder.reflectionHashCode(this);
     }
 
-    
-    public String getTitle() {
-        return title;
+
+    public String getName() {
+        return name;
     }
 
     
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+   
+    public int getAge() {
+        return age;
     }
 
     
-    public BookType getBookType() {
-        return bookType;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-
-    public void setBookType(BookType bookType) {
-        this.bookType = bookType;
+    public String getPhone(){
+        return phone;
     }
 
+    public void setPhone(String phone){
+        this.phone = phone;
+    }
     
     public Long getId() {
         return id;
     }
 
-    
     public void setId(Long id) {
         this.id = id;
     }

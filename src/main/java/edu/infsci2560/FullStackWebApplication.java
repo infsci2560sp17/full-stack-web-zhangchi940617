@@ -3,6 +3,8 @@ package edu.infsci2560;
 import edu.infsci2560.models.Book;
 import edu.infsci2560.models.Book.BookType;
 import edu.infsci2560.repositories.BookRepository;
+import edu.infsci2560.models.BookWebsite;
+import edu.infsci2560.repositories.BookWebsiteRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +12,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan({"edu.infsci2560"})
 public class FullStackWebApplication {
 
     private static final Logger log = LoggerFactory.getLogger(FullStackWebApplication.class);
@@ -23,6 +27,11 @@ public class FullStackWebApplication {
         repository.save(new Book(1L, "Project Management", BookType.Management));
         repository.save(new Book(2L, "Art History", BookType.Art));
         repository.save(new Book(3L, "The Little Prince", BookType.Novel));
+
+        BookWebsiteRepository repository1 = ctx.getBean(BookWebsiteRepository.class);
+        repository1.save(new BookWebsite(1L, "Amazon", "www.amazon.com"));
+        repository1.save(new BookWebsite(2L, "Book Finder", "www.bookfinder.com/"));
+        repository1.save(new BookWebsite(3L, "Addall", "www.addall.com/"));
     }
 
 
