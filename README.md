@@ -33,9 +33,9 @@ TODO : Modify to match your project specific Travis Build
 
 TODO : Please list key features of your project.
 
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
+* Add books
+* Edit personal information
+* Upload file
 
 ## Project Details
 
@@ -45,7 +45,8 @@ TODO : please provide a description of your landing page inluding a screen shot 
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+In Magazine page, users should enter a title, choose a magazine type, select the year and month of the publishment of a magazine.
+![](input form.png)
 
 ## API
 

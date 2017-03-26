@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ## [Unreleased]
 ### Added
 
+## [v1.4] - 2017-03-25
+### Added
+- added 3 entites, repositories(personal information, magazines, book websites)
+- added 3 MVC controllers and pages
+- added CSS to html
+- added javascript, such as validator function.
+
 ## [v1.3] - 2017-02-18
 ### Added
 - cloned the teacher's code.
