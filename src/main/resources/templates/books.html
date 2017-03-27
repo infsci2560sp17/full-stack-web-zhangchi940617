@@ -65,6 +65,7 @@
                     <td data-th-text="${book.id}"></td>
                     <td data-th-text="${book.title}"></td>
                     <td data-th-text="${book.bookType}"></td>
+                    <td><a data-th-href="@{/books/edit/{id}(id=${book.id})}">edit</a></td>
                 </tr>
             </table>
         </div>

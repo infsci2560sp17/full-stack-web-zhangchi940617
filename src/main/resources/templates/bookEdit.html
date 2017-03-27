@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Edit BOOK</title>
+    </head>
+    <body>
+        EDIT BOOK<br />
+        <form data-th-action="@{/books/edit/{id}(id=${book.id})}" data-th-object="${book}" data-th-method="put" role="form">
+            Title: <input type="text" name="title" data-th-value="${book.title}" /><br />
+            Book Type:<br />
+            <input type="radio" name="bookType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="bookType" value="Management" /> Management<br />
+            <input type="radio" name="bookType" value="Novel" /> Novel<br />
+            <input type="radio" name="bookType" value="Art" /> Art<br />
+            <input type="submit" value="Update Book"/><br />
+            bookType: <span data-th-value="${book.getBookType()}" />
+        </form>
+    </body>
+</html>
