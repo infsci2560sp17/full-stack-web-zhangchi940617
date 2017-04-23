@@ -36,12 +36,13 @@ TODO : Please list key features of your project.
 * Add books
 * Edit personal information
 * Upload file
+* Delete by ID
 
 ## Project Details
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+A welcome page with a book in the background ! [](https://.../image.JPG)
 
 ### User Input Form
 

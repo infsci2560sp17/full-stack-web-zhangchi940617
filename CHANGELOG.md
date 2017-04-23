@@ -3,8 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased]
+## [v1.5] - 2017-04-22
 ### Added
+- added a delete method to delete book by id
+- added rating function but there is something wrong with my project.
 
 ## [v1.4] - 2017-03-25
 ### Added
